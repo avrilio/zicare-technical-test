@@ -40,7 +40,7 @@
 
 import { ref } from 'vue';
 
-const isNotification = true;
+const isNotification = ref(true);
 const isFullscreen = ref(false);
 
 const toggleFullscreen = () => {

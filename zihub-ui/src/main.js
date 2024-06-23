@@ -26,9 +26,10 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { faHouse } from '@fortawesome/free-solid-svg-icons'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faTimes} from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
-library.add(faCircle, faLocationDot, faPeopleGroup, faUserGroup, faUser, faExpand, faCompress, faMoon, faBell, faCircleUser, faMagnifyingGlass, faDownload, faPlus, faHouse, faBars)
+library.add(faCircle, faLocationDot, faPeopleGroup, faUserGroup, faUser, faExpand, faCompress, faMoon, faBell, faCircleUser, faMagnifyingGlass, faDownload, faPlus, faHouse, faBars, faTimes)
 
 
 createApp(App)
