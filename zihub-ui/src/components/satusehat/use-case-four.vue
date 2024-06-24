@@ -57,10 +57,10 @@
                         </button>
                     </div>
                     <div class="flex flex-col space-y-2">
-                        <a class="big-button">
+                        <button @click="openModal" class="big-button">
                             <font-awesome-icon icon="fa-solid fa-plus" />
                             <span class="mx-2">Add Data</span>
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -113,6 +113,56 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+
+        <div v-if="isModalOpen" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div class="bg-zihub-background p-8 rounded-lg w-1/2">
+                <div class="flex justify-between items-center mb-4">
+                    <div class="flex items-center space-x-2 text-white">
+                        <font-awesome-icon icon="fa-solid fa-plus" />
+                        <h2 class="text-2xl font-bold ">Add Data</h2>
+                    </div>
+                    <button @click="closeModal" class="text-gray-500 hover:text-gray-700">
+                        <font-awesome-icon icon="fa-solid fa-times" />
+                    </button>
+                </div>
+                <div class="flex flex-col space-y-4">
+                    <div>
+                        <label for="modalStatus" class="table-filter-input-label">Status</label>
+                        <select id="modalStatus" class="table-filter-input mt-1 block w-full">
+                            <option value="SUCCESS">SUCCESS</option>
+                            <option value="FAILED">FAILED</option>
+                            <option value="DRAFT">DRAFT</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="modalSatusehatId" class="table-filter-input-label">ID SATUSEHAT</label>
+                        <input type="text" id="modalSatusehatId" class="table-filter-input mt-1 block w-full" />
+                    </div>
+                    <div>
+                        <label for="modalAdmissionId" class="table-filter-input-label">Admission ID</label>
+                        <input type="text" id="modalAdmissionId" class="table-filter-input mt-1 block w-full" />
+                    </div>
+                    <div>
+                        <label for="modalPatientNik" class="table-filter-input-label">Patient NIK</label>
+                        <div class="flex space-x-2">
+                            <input type="text" id="modalPatientNik" class="table-filter-input mt-1 block flex-grow" />
+                            <button class="bg-blue-700 text-white px-4 py-2 rounded-md mt-1 h-10">
+                                <font-awesome-icon icon="fa-solid fa-search" />
+                                <span class="ml-2">Search Data</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="modalPractitionerSid" class="table-filter-input-label">Practitioner SID</label>
+                        <input type="text" id="modalPractitionerSid" class="table-filter-input mt-1 block w-full" />
+                    </div>
+                    <div class="flex justify-end space-x-4">
+                        <button @click="closeModal" class="bg-red-600 text-white px-4 py-2 rounded-md">Cancel</button>
+                        <button class="bg-blue-700 text-white px-4 py-2 rounded-md">Save Data</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -180,6 +230,7 @@ const datas = [
     },
 ];
 
+const isModalOpen = ref(false);
 const filterStatus = ref(' ');
 const filteredDatas = ref([]);
 
@@ -190,6 +241,14 @@ const filterData = () => {
     }
 
     filteredDatas.value = filtered;
+};
+
+const openModal = () => {
+    isModalOpen.value = true;
+};
+
+const closeModal = () => {
+    isModalOpen.value = false;
 };
 
 onMounted(() => {
