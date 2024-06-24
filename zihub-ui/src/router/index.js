@@ -5,6 +5,10 @@ import UseCaseThree from '../components/satusehat/use-case-three.vue';
 import UseCaseFour from '../components/satusehat/use-case-four.vue';
 import UseCaseFive from '../components/satusehat/use-case-five.vue';
 import UseCaseSix from '../components/satusehat/use-case-six.vue';
+import UseCaseLocation from '../components/satusehat/use-case-location.vue';
+import UseCaseOrganization from '../components/satusehat/use-case-organization.vue';
+import UseCasePatient from '../components/satusehat/use-case-patient.vue';
+import UseCasePractitioner from '../components/satusehat/use-case-practitioner.vue';
 
 const routes = [
     {
@@ -36,6 +40,26 @@ const routes = [
         path: '/use-case-6',
         name: 'UseCaseSix',
         component: UseCaseSix
+    },
+    {
+        path: '/use-case-location',
+        name: 'UseCaseLocation',
+        component: UseCaseLocation
+    },
+    {
+        path: '/use-case-organization',
+        name: 'UseCaseOrganization',
+        component: UseCaseOrganization
+    },
+    {
+        path: '/use-case-patient',
+        name: 'UseCasePatient',
+        component: UseCasePatient
+    },
+    {
+        path: '/use-case-practitioner',
+        name: 'UseCasePractitioner',
+        component: UseCasePractitioner
     },
     {
         path: '/',

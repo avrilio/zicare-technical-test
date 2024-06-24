@@ -43,28 +43,28 @@
             <ul class="space-y-2 font-medium border-t border-gray-700 pt-4 mt-4 ">
                 <p class="text-sm text-gray-500 font-bold">MASTER DATA</p>
                 <li>
-                    <a href="#" class="side-bar-text group">
+                    <router-link to="/use-case-location" class="side-bar-text group">
                     <font-awesome-icon class="w-5 h-5" icon="fa-solid fa-location-dot" />
                     <span class="mx-3">Location</span>
-                    </a>
+                    </router-link>
                 </li>
                 <li>
-                    <a href="#" class="side-bar-text group">
+                    <router-link to="/use-case-organization" class="side-bar-text group">
                     <font-awesome-icon class="w-5 h-5" icon="fa-solid fa-people-group" />
                     <span class="mx-3">Organization</span>
-                    </a>
+                    </router-link>
                 </li>
                 <li>
-                    <a href="#" class="side-bar-text group">
+                    <router-link to="/use-case-patient" class="side-bar-text group">
                     <font-awesome-icon class="w-5 h-5" icon="fa-solid fa-user-group" />
                     <span class="mx-3">Patient</span>
-                    </a>
+                    </router-link>
                 </li>
                 <li>
-                    <a href="#" class="side-bar-text group">
+                    <router-link to="/use-case-practitioner" class="side-bar-text group">
                     <font-awesome-icon class="w-5 h-5" icon="fa-solid fa-user" />
                     <span class="mx-3">Practitioner</span>
-                    </a>
+                    </router-link>
                 </li>
             </ul>
         </div>
