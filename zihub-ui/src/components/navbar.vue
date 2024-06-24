@@ -2,7 +2,6 @@
     <nav class="border-2 rounded-2xl border-zihub-border bg-zihub-background mb-3">
       <div class="flex items-center justify-between p-4">
         <a href="#" class="flex items-center px-2">
-          <img src="" class="h-8" alt="" />
           <span class="text-2xl font-semibold text-sky-400">Zihub</span>
         </a>
         <div class="flex">
