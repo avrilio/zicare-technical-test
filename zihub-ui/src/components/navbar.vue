@@ -28,7 +28,7 @@
               <a class="small-button"><font-awesome-icon icon="fa-regular fa-circle-user" /></a>
             </li>
             <li>
-              <a class="flex items-center justify-center rounded-lg transition duration-75 text-gray-200 hover:bg-gray-700 w-auto h-10 p-3">RSUD Majalengka</a>
+              <button class="flex items-center justify-center rounded-lg transition duration-75 text-gray-200 hover:bg-gray-700 w-auto h-10 p-3">RSUD Majalengka<font-awesome-icon class="ml-2" icon="fa-solid fa-angle-down" /></button>
             </li>
           </ul>
         </div>
