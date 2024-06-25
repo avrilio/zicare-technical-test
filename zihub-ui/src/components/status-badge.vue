@@ -1,5 +1,5 @@
 <template>
-    <span :class="badgeClass">
+    <span class="text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-2xl border-2 border-zihub-border bg-transparent" :class="statusStyle">
         {{ status }}
     </span>
 </template>
@@ -14,9 +14,8 @@ const props = defineProps({
   }
 });
 
-const badgeClass = computed(() => {
+const statusStyle = computed(() => {
   return {
-    'text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-2xl border-2 border-zihub-border bg-transparent': true,
     'text-green-300': props.status === 'SUCCESS',
     'text-red-300': props.status === 'FAILED',
     'text-white': props.status === 'DRAFT'
